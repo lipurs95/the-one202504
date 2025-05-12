@@ -7,7 +7,7 @@ Scenario.name = default_scenario
 Scenario.simulateConnections = true
 Scenario.updateInterval = 0.1
 # 43200s == 12h
-Scenario.endTime = 43200
+Scenario.endTime = 60
 
 ## Interface-specific settings:
 # type : which interface class the interface belongs to
@@ -82,7 +82,7 @@ Group3.groupID = w
 Group4.groupID = t
 Group4.bufferSize = 50M
 Group4.movementModel = MapRouteMovement
-Group4.routeFile = data/tram3.wkt
+Group4.routeFile = data/cakung.osm.wkt
 Group4.routeType = 1
 Group4.waitTime = 10, 30
 Group4.speed = 7, 10
@@ -94,7 +94,7 @@ Group4.interface2 = highspeedInterface
 Group5.groupID = t
 Group5.bufferSize = 50M
 Group5.movementModel = MapRouteMovement
-Group5.routeFile = data/tram4.wkt
+Group5.routeFile = data/cakung.osm.wkt
 Group5.routeType = 2
 Group5.waitTime = 10, 30
 Group5.speed = 7, 10
@@ -103,7 +103,7 @@ Group5.nrofHosts = 2
 Group6.groupID = t
 Group6.bufferSize = 50M
 Group6.movementModel = MapRouteMovement
-Group6.routeFile = data/tram10.wkt
+Group6.routeFile = data/cakung.osm.wkt
 Group6.routeType = 2
 Group6.waitTime = 10, 30
 Group6.speed = 7, 10
@@ -130,17 +130,17 @@ Events1.prefix = M
 # seed for movement models' pseudo random number generator (default = 0)
 MovementModel.rngSeed = 1
 # World's size for Movement Models without implicit size (width, height; meters)
-MovementModel.worldSize = 4500, 3400
+MovementModel.worldSize = 15000, 15000
 # How long time to move hosts in the world before real simulation
 MovementModel.warmup = 1000
 
 ## Map based movement -movement model specific settings
-MapBasedMovement.nrofMapFiles = 4
+MapBasedMovement.nrofMapFiles = 1
 
-MapBasedMovement.mapFile1 = data/roads.wkt
-MapBasedMovement.mapFile2 = data/main_roads.wkt
-MapBasedMovement.mapFile3 = data/pedestrian_paths.wkt
-MapBasedMovement.mapFile4 = data/shops.wkt
+MapBasedMovement.mapFile1 = data/cakung.osm.wkt
+#MapBasedMovement.mapFile2 = data/main_roads.wkt
+#MapBasedMovement.mapFile3 = data/pedestrian_paths.wkt
+#MapBasedMovement.mapFile4 = data/shops.wkt
 
 ## Reports - all report names have to be valid report classes
 
@@ -168,7 +168,7 @@ Optimization.randomizeUpdateOrder = true
 ## GUI settings
 
 # GUI underlay image settings
-GUI.UnderlayImage.fileName = data/helsinki_underlay.png
+GUI.UnderlayImage.fileName = data/cakung.png
 # Image offset in pixels (x, y)
 GUI.UnderlayImage.offset = 64, 20
 # Scaling factor for the image
